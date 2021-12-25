@@ -7,6 +7,12 @@ html lang="en"
   body
     header
       h1 My Slim Roda App (by Pincha)
-      p Hello #{@layout_str}      
+      
+    ul
+        li <a href="/about" title="About">About</a>
+        li <a href="/contact" title="Contact">Contact</a>
+        
+      
+    p Hello #{@layout_str}      
     section
       == yield
