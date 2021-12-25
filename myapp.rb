@@ -5,7 +5,7 @@ class Myapp < Roda
     plugin :static, ["/images", "/css", "/js"]
     plugin :render, engine: 'slim'
     plugin :head
-  
+    @layout_str = "Not the one I intended"
     route do |r|
         r.root do
             @title = "App in Roda"
@@ -17,11 +17,13 @@ class Myapp < Roda
 
         r.get "about" do
             @title = "App in Roda - - about"
+            @about_str = "About String"
             view("about")
         end
         
         r.get "contact" do
             @title = "App in Roda - - contact"
+            @contact_str = "Contact String"
             view("contact")
         end
 
