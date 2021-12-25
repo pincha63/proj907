@@ -1,9 +1,10 @@
 require "roda"
 
-class Myapp < Roda
+class Myapp < Roda # called from config.ru
   route do |r|
     r.root do
-      "Hello!"
+      u = "Pincharrata"
+        "Hello #{u}!"
     end
   end
 end
