@@ -1,10 +1,13 @@
 require "roda"
 
-class Myapp < Roda # called from config.ru
-  route do |r|
-    r.root do
-      u = "Pincharrata"
-        "Hello #{u}!"
+class Myapp < Roda
+    plugin :static, ["/images", "/css", "/js"]
+    plugin :render
+    plugin :head
+  
+    route do |r|
+      r.root do
+        view("homepage")
+      end
     end
   end
-end

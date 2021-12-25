@@ -1,19 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    erubis (2.7.0)
     nio4r (2.5.8)
     puma (5.5.2)
       nio4r (~> 2.0)
     rack (2.2.3)
     roda (3.51.0)
       rack
+    tilt (2.0.10)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  erubis (~> 2.7.0)
   puma
   roda
+  tilt (~> 2.0.1)
 
 BUNDLED WITH
    2.2.32
