@@ -1,18 +1,18 @@
 doctype html
 html lang="en"
+
   head
     title== @title || "Layout is not seeing title coming from upstream"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
   body
     header
       h1 My Slim Roda App (by Pincha)
-      
     ul
         li <a href="/about" title="About">About</a>
         li <a href="/contact" title="Contact">Contact</a>
-        
-      
     p Hello #{@layout_str}      
     section
       == yield

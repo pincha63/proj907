@@ -8,7 +8,7 @@ class Myapp < Roda
   
     route do |r|
         r.root do
-            ### @title = "... and note: This variable is visible by the page called by view/render"
+            @title = "App in Roda"
             @layout_str = "Layout String"
             @homepage_str = "Homepage String"
             view("homepage") # this here uses the render plugin
@@ -16,10 +16,12 @@ class Myapp < Roda
         end
 
         r.get "about" do
+            @title = "App in Roda - - about"
             view("about")
         end
         
         r.get "contact" do
+            @title = "App in Roda - - contact"
             view("contact")
         end
 
