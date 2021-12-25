@@ -1,12 +1,12 @@
 doctype html
 html lang="en"
   head
-    title== @title
+    title== @title || "Layout is not seeing title coming from upstream"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
   body
     header
       h1 My Slim Roda App (by Pincha)
-      p Hello #{@title}      
+      p Hello #{@layout_str}      
     section
       == yield
