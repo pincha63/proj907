@@ -11,20 +11,20 @@ class Myapp < Roda
             @title = "App in Roda"
             @layout_str = "Layout String"
             @homepage_str = "Homepage String"
-            view("homepage") # this here uses the render plugin
+            p view("homepage") # this here uses the render plugin
             ### render("homepage") # this here uses the render plugin, notbut does not use the layout
         end
 
         r.get "about" do
             @title = "App in Roda - - about"
             @about_str = "About String"
-            view("about")
+            p view("about")
         end
         
         r.get "contact" do
             @title = "App in Roda - - contact"
             @contact_str = "Contact String"
-            view("contact")
+            p view("contact")
         end
 
     end
