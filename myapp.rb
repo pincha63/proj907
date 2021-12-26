@@ -7,25 +7,22 @@ class Myapp < Roda
     plugin :head
     @layout_str = "Not the one I intended"
     route do |r|
+        @layout_str = "ALSO, not the one I intended"
         r.root do
             @title = "App in Roda"
             @layout_str = "Layout String"
             @homepage_str = "Homepage String"
-            view("homepage") # this here uses the render plugin
-            ### render("homepage") # this here uses the render plugin, notbut does not use the layout
+            p view("homepage") # this here uses the render plugin
         end
-
         r.get "about" do
             @title = "App in Roda - - about"
             @about_str = "About String"
-            view("about")
+            p view("about")
         end
-        
         r.get "contact" do
             @title = "App in Roda - - contact"
             @contact_str = "Contact String"
-            view("contact")
+            p view("contact")
         end
-
     end
 end
