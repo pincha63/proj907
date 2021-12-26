@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+# "gem list" to query local install
+
 # Roda is at 3.5.1 as of Dec 2021
 gem "roda"
 # Puma is at 5.5.2 as of Dec 2021
