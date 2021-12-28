@@ -13,7 +13,10 @@ class Myapp < Roda
             @layout_str = "Layout String"
             @homepage_str = "Homepage String"
             p view("homepage") # this here uses the render plugin
+<<<<<<< HEAD
             ### render("homepage") # this here uses the render plugin, notbut does not use the layout
+=======
+>>>>>>> 274dd3f3e3420a7e78d0cfd647e858426dd72a39
         end
         r.get "about" do
             @title = "App in Roda - - about"
